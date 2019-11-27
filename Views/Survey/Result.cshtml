@@ -1,3 +1,6 @@
+@using dojo_survey.Models 
+@model Survey
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,10 +12,10 @@
 <body>
     <div>
         <h1>Submitted Info</h1>
-        <p>Name: @ViewBag.name</p>
-        <p>Dojo Location: @ViewBag.location</p>
-        <p>Favorite Language: @ViewBag.language</p>
-        <p>Comment: @ViewBag.comment</p>
+        <p>Name: @Model.name</p>
+        <p>Dojo Location: @Model.location</p>
+        <p>Favorite Language: @Model.language</p>
+        <p>Comment: @Model.comment</p>
         <a href="/">Go Back</a>
     </div>
 </body>
