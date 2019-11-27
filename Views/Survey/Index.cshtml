@@ -1,3 +1,6 @@
+@using dojo_survey.Models 
+@model Survey
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,19 +11,23 @@
 </head>
 <body>
     <h1>Dojo Survey</h1>
-    <form action="submit" method="post">
-        <label for="name">Your name: </label>
-        <input name="name" type="text"><br>
-        <label for="location">Dojo Location: </label>
-        <input name="location" type="text"><br>
-        <label for="language">Favorite Language: </label>
-        <select name="language">
+    <form asp-action="Submit" asp-controller="Survey" method="post">
+        <span asp-validation-for="name"></span><br>
+        <label asp-for="name">Your name: </label>
+        <input asp-for="name"><br>
+        <span asp-validation-for="location"></span><br>
+        <label asp-for="location">Dojo Location: </label>
+        <input asp-for="location"><br>
+        <span asp-validation-for="language"></span><br>
+        <label asp-for="language">Favorite Language: </label>
+        <select asp-for="language">
             <option value="C#">C#</option>
             <option value="JavaScript">JavaScript</option>
             <option value="Python">Python</option>
         </select><br>
-        <label for="comment">Comment: </label>
-        <textarea name="comment" id="" cols="30" rows="10"></textarea><br>
+        <span asp-validation-for="comment"></span><br>
+        <label asp-for="comment">Comment: </label>
+        <textarea asp-for="comment" cols="30" rows="10"></textarea><br>
         <button>Submit</button>
     </form>
 </body>

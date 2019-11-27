@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using dojo_survey.Models;
+using System.Diagnostics;
 
 namespace survey.Controllers
 {
@@ -10,10 +11,17 @@ namespace survey.Controllers
         {
             return View();
         }
-        [HttpPost("submit")]
-        public IActionResult SubmitForm(Survey yourSurvey)
+        [HttpPost("Submit")]
+        public IActionResult Submit(Survey yourSurvey)
         {
-            return RedirectToAction("Result", yourSurvey);
+            if(ModelState.IsValid)
+            {
+                return RedirectToAction("Result", yourSurvey);
+            }
+            else
+            {
+                return View("Index");
+            }
         }
         [HttpGet("result")]
         public ViewResult Result(Survey yourSurvey)

@@ -2969,6 +2969,11 @@
       "FilePath": "c:\\Users\\Kathy\\Desktop\\Coding\\Coding Dojo\\csharp\\dojo_survey\\Views\\Survey\\Index.cshtml",
       "TargetPath": "Views\\Survey\\Index.cshtml",
       "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Kathy\\Desktop\\Coding\\Coding Dojo\\csharp\\dojo_survey\\Views\\Shared\\_ViewImports.cshtml",
+      "TargetPath": "Views\\Shared\\_ViewImports.cshtml",
+      "FileKind": "mvc"
     }
   ],
   "SerializationFormat": "0.2"
